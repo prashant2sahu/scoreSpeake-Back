@@ -3,8 +3,9 @@ const mongoose=require('mongoose');
 require("dotenv").config();
 
 const dbconnect = ()=>{
-    console.log("mongourl",process.env.MONGODB_URL);
-    mongoose.connect(process.env.MONGODB_URL,{
+    // console.log("mongourl",process.env.MONGODB_URL);
+     mongoose.connect(process.env.MONGODB_URL || `mongodb+srv://prashant:NWbRH7oYGRz1YbrP@cluster0.gaxjsnl.mongodb.net/ScoreSpeake`,{
+    // mongoose.connect(process.env.MONGODB_URL,{
         useNewUrlParser: true, 
         useUnifiedTopology: true,
      })
